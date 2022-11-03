@@ -1,4 +1,4 @@
-# Visual-Basic-INI
+# Visual Basic INI Reader Writer
 A class file to read/write INI files to store application configurations.
 ## Usage :
 
