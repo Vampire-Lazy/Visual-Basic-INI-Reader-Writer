@@ -7,31 +7,32 @@ A class file to read/write INI files to store application configurations.
 ```
 [MAIN]
 Setting_1=something
+Setting_2=something2
 ```
 
-Instantiate the class:
+**Instantiate the class:**
 ```
-Dim objIniFile As New InIFile("path_of_your_file")
+Dim objIniFile As New InIFile("D:\WorldInfo.ini")
 ```
 
-Get the setting:
+**Get the setting:**
 
 ```
 Dim x As String
 x = objIniFile.GetString("MAIN", "Setting_1", "")
 ```
 
-Update / Create a setting:
+**Update / Create a setting:**
 
 ```
 objIniFile.WriteString("MAIN", "Setting_1", "new_setting")
 ```
 
-This is what it looks like:
+**This is what it looks like:**
 ```
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
     Dim objIniFile As New InIFile("D:\WorldInfo.ini")
-    Label1.Text = objIniFile.GetString("CATEGORYNAME", "Value_1", "")
-    Label2.Text = objIniFile.GetString("CATEGORYNAME", "Value_2", "")
+    Label1.Text = objIniFile.GetString("MAIN", "Setting_1", "")
+    Label2.Text = objIniFile.GetString("MAIN", "Setting_2", "")
 End Sub
 ```
